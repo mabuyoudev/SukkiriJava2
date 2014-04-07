@@ -8,16 +8,16 @@ import java.util.zip.GZIPOutputStream;;
 public class Practice6_1 {
 
 	public static void main(String[] args) throws IOException {
-		String inFile = args[0];
-		String outFile = args[1];
+		String inFile	= args[0];
+		String outFile	= args[1];
 		
-		FileInputStream fis = null;
-		GZIPOutputStream gzos = null;
+		FileInputStream fis		= null;
+		GZIPOutputStream gzos	= null;
 		
 		try {
 			fis = new FileInputStream(inFile);
-			FileOutputStream fos = new FileOutputStream(outFile);
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
+			FileOutputStream fos		= new FileOutputStream(outFile);
+			BufferedOutputStream bos	= new BufferedOutputStream(fos);
 			gzos = new GZIPOutputStream(bos);
 			
 			int i = fis.read();
